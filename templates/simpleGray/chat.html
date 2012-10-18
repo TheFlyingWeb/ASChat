@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Чат</title>
+<style type="text/css">
+html, body {
+   height: 100%;
+   margin:0;
+   padding:0;
+}
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+.linkblock {	display:block;
+	width:100%;
+	height:100%;
+}
+</style>
+@INHEAD@
+</head>
+
+<body>
+<table width="1000" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="min-height:100%;">
+  <tr>
+    <td width="700" height="655" valign="top"><table width="98%" height="650px" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-bottom:15px; overflow:auto;">
+      <tr>
+        <td width="10" height="10" background="@TemplateDir@/images/block_corner_left-top.png"></td>
+        <td background="@TemplateDir@/images/block_side_top.png"></td>
+        <td width="10" background="@TemplateDir@/images/block_corner_right-top.png"></td>
+      </tr>
+      <tr>
+        <td background="@TemplateDir@/images/block_side_left.png"></td>
+        <td valign="top" bgcolor="#F2F2F2"><div id='mainchatscreen' style="width:660px; height:650px; overflow:auto;" ></div></td>
+        <td background="@TemplateDir@/images/block_side_right.png"></td>
+      </tr>
+      <tr>
+        <td background="@TemplateDir@/images/block_corner_left-bottom.png" height="10"></td>
+        <td background="@TemplateDir@/images/block_side_bottom.png"></td>
+        <td background="@TemplateDir@/images/block_corner_right-bottom.png"></td>
+      </tr>
+    </table>
+      <br />
+      <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-bottom:15px;">
+        <tr>
+          <td width="10" height="10" background="@TemplateDir@/images/block_corner_left-top.png"></td>
+          <td background="@TemplateDir@/images/block_side_top.png"></td>
+          <td width="10" background="@TemplateDir@/images/block_corner_right-top.png"></td>
+        </tr>
+        <tr>
+          <td background="@TemplateDir@/images/block_side_left.png"></td>
+          <td bgcolor="#F2F2F2"><div id="mainchatscreen2">@TALKFORM@<br />
+            @SMILEPANEL@ </div></td>
+          <td background="@TemplateDir@/images/block_side_right.png"></td>
+        </tr>
+        <tr>
+          <td background="@TemplateDir@/images/block_corner_left-bottom.png" height="10"></td>
+          <td background="@TemplateDir@/images/block_side_bottom.png"></td>
+          <td background="@TemplateDir@/images/block_corner_right-bottom.png"></td>
+        </tr>
+    </table></td>
+    <td valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-bottom:15px;">
+      <tr>
+        <td width="10" height="10" background="@TemplateDir@/images/block_corner_left-top.png"></td>
+        <td background="@TemplateDir@/images/block_side_top.png"></td>
+        <td width="10" background="@TemplateDir@/images/block_corner_right-top.png"></td>
+      </tr>
+      <tr>
+        <td background="@TemplateDir@/images/block_side_left.png"></td>
+        <td bgcolor="#F2F2F2">Ваш ник: @USERNICKNAME@
+          <hr />          <div id="whoisonline" style="overflow:auto; height:300px;">Список скоро загрузиться...</div></td>
+        <td background="@TemplateDir@/images/block_side_right.png"></td>
+      </tr>
+      <tr>
+        <td background="@TemplateDir@/images/block_corner_left-bottom.png" height="10"></td>
+        <td background="@TemplateDir@/images/block_side_bottom.png"></td>
+        <td background="@TemplateDir@/images/block_corner_right-bottom.png"></td>
+      </tr>
+    </table>
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-bottom:15px;">
+        <tr>
+          <td width="10" height="10" background="@TemplateDir@/images/block_corner_left-top.png"></td>
+          <td background="@TemplateDir@/images/block_side_top.png"></td>
+          <td width="10" background="@TemplateDir@/images/block_corner_right-top.png"></td>
+        </tr>
+        <tr>
+          <td background="@TemplateDir@/images/block_side_left.png"></td>
+          <td bgcolor="#F2F2F2">@USERNICKNAME@ , Вы можете выбрать цвет своих сообщений в чате:<br />
+            @COLORSELECTOR@</td>
+          <td background="@TemplateDir@/images/block_side_right.png"></td>
+        </tr>
+        <tr>
+          <td background="@TemplateDir@/images/block_corner_left-bottom.png" height="10"></td>
+          <td background="@TemplateDir@/images/block_side_bottom.png"></td>
+          <td background="@TemplateDir@/images/block_corner_right-bottom.png"></td>
+        </tr>
+    </table>
+      <br />
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-bottom:15px;">
+        <tr>
+          <td width="10" height="10" background="@TemplateDir@/images/block_corner_left-top.png"></td>
+          <td background="@TemplateDir@/images/block_side_top.png"></td>
+          <td width="10" background="@TemplateDir@/images/block_corner_right-top.png"></td>
+        </tr>
+        <tr>
+          <td background="@TemplateDir@/images/block_side_left.png"></td>
+          <td bgcolor="#F2F2F2"><a href="@LOGOUTLINK@">Выйти из чата</a></td>
+          <td background="@TemplateDir@/images/block_side_right.png"></td>
+        </tr>
+        <tr>
+          <td background="@TemplateDir@/images/block_corner_left-bottom.png" height="10"></td>
+          <td background="@TemplateDir@/images/block_side_bottom.png"></td>
+          <td background="@TemplateDir@/images/block_corner_right-bottom.png"></td>
+        </tr>
+      </table>
+      <br />
+      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-bottom:15px;">
+        <tr>
+          <td width="10" height="10" background="@TemplateDir@/images/block_corner_left-top.png"></td>
+          <td background="@TemplateDir@/images/block_side_top.png"></td>
+          <td width="10" background="@TemplateDir@/images/block_corner_right-top.png"></td>
+        </tr>
+        <tr>
+          <td background="@TemplateDir@/images/block_side_left.png"></td>
+          <td bgcolor="#F2F2F2"><p>Скачать последнюю версию чата Вы можете с официальной страницы:</p>
+          <p align="center"><a href="http://aspirine-soft.ru/chat/"><img src="../../images/Down.png" width="64" height="64" border="0" /><br />
+Скачать ASChat II<br />
+Версия 2.0.1</a></p></td>
+          <td background="@TemplateDir@/images/block_side_right.png"></td>
+        </tr>
+        <tr>
+          <td background="@TemplateDir@/images/block_corner_left-bottom.png" height="10"></td>
+          <td background="@TemplateDir@/images/block_side_bottom.png"></td>
+          <td background="@TemplateDir@/images/block_corner_right-bottom.png"></td>
+        </tr>
+    </table>
+    <br />
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-bottom:15px;">
+      <tr>
+        <td width="10" height="10" background="@TemplateDir@/images/block_corner_left-top.png"></td>
+        <td background="@TemplateDir@/images/block_side_top.png"></td>
+        <td width="10" background="@TemplateDir@/images/block_corner_right-top.png"></td>
+      </tr>
+      <tr>
+        <td background="@TemplateDir@/images/block_side_left.png"></td>
+        <td bgcolor="#F2F2F2"><!-- Yandex.Metrika informer -->
+<center><a href="http://metrika.yandex.ru/stat/?id=396305&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/396305/3_0_E0E0E0FF_C0C0C0FF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:396305,type:0,lang:'ru'});return false}catch(e){}"/></a></center>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter396305 = new Ya.Metrika({id:396305, enableAll: true, webvisor:true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/396305" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></td>
+        <td background="@TemplateDir@/images/block_side_right.png"></td>
+      </tr>
+      <tr>
+        <td background="@TemplateDir@/images/block_corner_left-bottom.png" height="10"></td>
+        <td background="@TemplateDir@/images/block_side_bottom.png"></td>
+        <td background="@TemplateDir@/images/block_corner_right-bottom.png"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td align="center" valign="top">@COPYRIGHTS@</td>
+  </tr>
+</table>
+</body>
+</html>
